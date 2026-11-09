@@ -9,9 +9,9 @@
     Title="AppLibertadoresHAS">
 
     <ShellContent
-        Title="Localização"
-        ContentTemplate="{DataTemplate usuarios:LocalizacaoView}"
-        Route="localizacao" />
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
 
     <ShellContent
         Title="Partidas"
@@ -19,7 +19,7 @@
         Route="tabela" />
 
     <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+        Title="Localização"
+        ContentTemplate="{DataTemplate usuarios:LocalizacaoView}"
+        Route="localizacao" />
 </Shell>

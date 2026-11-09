@@ -8,12 +8,14 @@ namespace AppLibertadoresHAS.Services
     public class UsuarioService : Request
     {
         private readonly Request _request;
+
         private const string _apiUrlBase = "https://apilibertadores-luiz-hzhucrffc5b2hqa2.mexicocentral-01.azurewebsites.net/Usuarios";
         //private const string _apiUrlBase = "https://xyz.azurewebsites.net/Usuarios";
 
         public UsuarioService()
         {
             _request = new Request();
+
         }
 
         public async Task<Usuario> PostRegistrarUsuarioAsync(Usuario u)

@@ -1,4 +1,5 @@
-﻿using AppLibertadoresHAS.Models;
+﻿using Android.Gms.Tasks;
+using AppLibertadoresHAS.Models;
 using AppLibertadoresHAS.Services;
 using Microsoft.Maui.Controls.Maps;
 using Microsoft.Maui.Maps;
@@ -14,7 +15,15 @@ namespace AppLibertadoresHAS.ViewModels
 {
     public class AlbumViewModel : BaseViewModel
     {
+      
         private Map meuMapa;
+
+        public AlbumViewModel()
+        {
+            string token = Preferences.Get("token", string.Empty);
+
+        }
+
         public Map MeuMapa
         {
             get => meuMapa;
@@ -32,7 +41,7 @@ namespace AppLibertadoresHAS.ViewModels
             try
             {
                 Location location = new Location(-23.5200241d, -46.596498d);
-                Pin pinEtec = new Pin();
+                Pin pinEtec = new Pin
                 {
                     Type = PinType.Place,
                     Label = "Etec Horácio",
@@ -52,5 +61,6 @@ namespace AppLibertadoresHAS.ViewModels
                 await Application.Current.MainPage.DisplayAlert("ERRO", ex.Message, "OK");
             }
         }
+    
     }
 }
